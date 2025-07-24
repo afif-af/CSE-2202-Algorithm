@@ -20,6 +20,14 @@ void bubbleSort(int arr[], int n)
         }
     }
 
+    cout<<"After Sorted Array: "<<endl;
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i] <<" ";
+    }
+
+    cout<<endl;
+
 }
 int binarySearch(int arr[], int n, int number)
 {
@@ -75,7 +83,7 @@ int main() {
 
     if(index != -1)
     {
-        cout<<"Number id found , index is: "<<index +1<<endl;
+        cout<<"Number id found, index is: "<<index+1<<endl;
     }
     else
     {

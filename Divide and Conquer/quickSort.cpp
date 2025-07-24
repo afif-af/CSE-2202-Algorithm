@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+int stepCount = 0;
+
 void Swap(int *a, int *b)
 {
    int temp=*a;
@@ -19,12 +21,14 @@ int Partition(int arr[], int l, int h)
         while(i<=h && arr[i]<=pivot)
         {
             i++;
+            stepCount++;
 
         }
 
         while(j>=l && arr[j] >pivot)
         {
             j--;
+            stepCount++;
         }
 
         if(i<j)
@@ -73,5 +77,7 @@ int main()
     {
         cout<<arr[i]<<endl;
     }
+    cout<<endl;
+    cout << "Number of comparisons (steps): " << stepCount << endl;
 
 }
